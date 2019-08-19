@@ -1,6 +1,6 @@
 public class NodeDouble<T>{
     T value;
-    NodeDouble next, previous;
+    NodeDouble<T> next, previous;
 
     public NodeDouble(T value, NodeDouble next,NodeDouble previous){
         this.value = value;
