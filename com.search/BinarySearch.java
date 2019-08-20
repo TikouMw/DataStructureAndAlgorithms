@@ -2,17 +2,14 @@ public class BinarySearch{
 
     public static void main(String[] args){
         //define array
-        int[] numbers = new int[100];
-        for(int i=0;i<100;i++) numbers[i] = i+1;
+        int[] numbers = { 1, 3, 5, 10, 40, 55, 444, 988, 1000 };
+        
         //Binary search
-        int SearchNumber = 89;
+        int SearchNumber = 10050;
         int low=0, mid=0, high=numbers.length-1;
         Boolean isFound=false;
         while(!isFound){
-            if(low>high){
-                System.out.println("number not found");
-                break;
-            }
+            if(low>high) break;
             mid = low+((high-low)/2);
             if(numbers[mid] == SearchNumber) {isFound=true;break;}
             else if(numbers[mid]<SearchNumber) low=mid+1;
