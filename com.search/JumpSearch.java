@@ -2,11 +2,12 @@ public class JumpSearch{
 
     public static void main(String[] args){
         //define numbersay
-        int[] numbers = { 1, 3, 5, 10, 40, 55, 444, 988, 1000 };
+        int[] numbers = { 0, 1, 1, 2, 3, 5, 8, 13, 21, 
+            34, 55, 89, 144, 233, 377, 610}; 
         
         //JumpSearch
         //The optimal value of m is √n
-        int SearchNumber = 2;
+        int SearchNumber = 4;
         int index=0, length=numbers.length, m=(int) Math.sqrt(length);
         /* 
         STEP 1: Jump from index 0 to index 3;
@@ -23,6 +24,7 @@ public class JumpSearch{
                         isFound=true;
                         break;
                     }
+                break;
             }
             index += m;
         }
