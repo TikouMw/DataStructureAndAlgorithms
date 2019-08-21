@@ -4,27 +4,29 @@ public class FibonacciSearch{
         //define array
         int[] numbers = { 0, 1, 1, 2, 3, 5, 8, 13, 21, 
             34, 55, 89, 144, 233, 377, 610}; 
-         //FibonacciSearch
-        int SearchNumber = 4;
+        //FibonacciSearch
+        int SearchNumber = 21;
         Boolean isFound=false;
-        int i=0, j=1, length = numbers.length-1;
-        while(j<=length){
-            j += i;
-            if(j>length) j=length;
-            if(numbers[j] == SearchNumber || numbers[i] == SearchNumber){
+        int f0=0, f1=1, l = numbers.length;
+        while(f1<300){f1 += f0; f0 = f1-f0;}
+        /*if(numbers[f1] == SearchNumber) isFound=true;
+        else if(numbers[f1-l] > SearchNumber){
+            l = f1-l;
+        }else
+            /*if(f1>length) f1=length;
+            if(numbers[f1] == SearchNumber || numbers[i] == SearchNumber){
                 isFound=true;
                 break;
             }
-            else if(numbers[j] > SearchNumber){
-                for(int index=i;index<=j&&index<=length;index++)
+            else if(numbers[f1] > SearchNumber){
+                for(int index=i;index<=f1&&index<=length;index++)
                     if(numbers[index] == SearchNumber){
                         isFound=true;
                         break;
                     }
                 break;       
-            }
-            i = j;
-        }
+            }*/
+        
         System.out.println("Found: "+isFound);
     }
 }
